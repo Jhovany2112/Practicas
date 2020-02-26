@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alineación de Contenido</title>
+    <style>
+body{
+        font-family: Arial;
+        font-size: 16px;
+        color:red
+    }
+    .container
+        {
+        display: grid;   
+        /*grid-template-columns: 25% 200px 25%;
+        grid-template-rows: 300px 300px; */
+        /*Para hacerlo mas corto se escribe asi,primero filas y luego columnas*/
+        grid-template: 300px 100px 100px /50% 200px 100px;
+
+        grid-gap: 5px;
+        height: 100vh;
+        grid-template-columns:repeat(3, 200px);  /* Pone las columnas*/
+        grid-template-rows: repeat (4, 100px);   /* generar las filas*/
+        justify-content: center;
+        align-content: center;
+        /*align-items: center strech */
+        /*align-items: center */
+        align-items: center strech;
+
+       /* justify-items: center;*/
+       /*justify-items: stretch;*/
+
+
+    }
+    .item
+    
+    {
+        background: lightblue;
+        padding: 10px;
+        border: 1px solid red;
+
+    }
+    </style>
+    {
+        .item:nth-of-type(5)
+        align-self:start;
+        justify-self:start;
+    }
+    
+</head>
+<body>
+    <section class="container">
+<div class="item"></div>
+
+<div class="item">Contenido #1</div>
+<div class="item">Contenido#2</div>
+<div class="item">Contenido#3</div>
+<div class="item">
+<div class="item">subitem1</div>
+<div class="item">subitem2</div>
+<div class="item">subitem3</div>
+<div class="item">subitem4</div>
+<div class="item">subitem5</div>
+</div>
+<div class="item">Contenido#5</div>
+<div class="item">Contenido#6</div>
+<div class="item">Contenido#7</div>
+<div class="item">Contenido#8</div>
+<div class="item">Contenido#9</div>
+<div class="item">Contenido#10</div>
+<div class="item">Contenido#11</div>
+<div class="item">Contenido#12</div>
+<!--div.item*12-->
+
+
+    </section>
+</body>
+</html>
